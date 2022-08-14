@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="assests/css/style.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#myTable').DataTable();
+    });
+  </script>
+
+</head>
+<nav class="navbar" id="navbar1">
+  <h2 class="dashboard"> Dashboard </h2>
+</nav>
+
+<body>
+  <div class="divbody">
+    <div class="tabel1 table-responsive" style="overflow-x: hidden;">
+      <!-- Button trigger modal -->
+      <div class="container">
+        <!-- Button to Open the Modal -->
+
+        <!-- The Modal  1 -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h5 class="modal-title">CV</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body1" style=" padding-top:18px;padding-left:15px;padding-right:30px; ">
+                <table class="table table-bordered table-responsive-lg ">
+                  <thead>
+                    <tr>
+                      <th scope="col">S.no</th>
+                      <th scope="col">Content</th>
+                      <th scope="col">Remark</th>
+                      <th scope="col">Eligible</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Appearance</td>
+                      <td><input class="row1" id="row1input"></td>
+                      <td><input class="row1" id="row2input"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td style="white-space: nowrap;">Resume Content</td>
+                      <td><input class="row1" id="row3input"></td>
+                      <td><input class="row1" id="row4input"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" style="height:40px; text-align :center; font-size: small;"
+                  data-dismiss="modal">Submit</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal End-->
+      <table id="myTable" class="table table-bordered table-hover mx-auto w-50 h-10" style="width:100%;  ">
+        <thead>
+          <div class="select">
+            <form action="/action_page.php">
+              <label for="cars" style="font-size:19;">Year </label>
+              <select name="cars" class="select1" id="cars" style="margin-left: 10px;
+                    margin-right: 10px;">
+                <option value="volvo">2020</option>
+                <option value="saab">2021</option>
+                <option value="opel">2022</option>
+                <option value="audi">2023</option>
+              </select>
+              <br>
+            </form>
+            <form action="/action_page.php">
+              <label for="cars" class="select2" style="font-size: 18px;">Section</label>
+              <select name="cars" id="cars" style="margin-left: 20px;">
+                <option value="volvo">A</option>
+                <option value="saab">B</option>
+              </select>
+              <br>
+            </form>
+          </div>
+          <tr class="change2" style="background-color:rgb(0, 0, 255); color: white;">
+            <div class="wtcl">
+              <th style="text-align: center;" class="w-0">S.no</th>
+              <th style="text-align: center;" class="w-2"> Name </th>
+              <th style="text-align: center;"> Status </th>
+              <th style="text-align: center; width:30%"> Edit/View </th>
+            </div>
+          </tr>
+        </thead>
+        <tbody style="text-align:center;">
+          <tr>
+            <td>1</td>
+            <td> Feroz </td>
+            <td class="text-success filled">
+              <div class="filled-box">filled</div>
+            </td>
+            <td><img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" id="myBtn" src="./assests/icons/pen (1).png" style="height: 20px;"
+                alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td> Deepak </td>
+            <td class="text-success filled">
+              <div class="filled-box">filled</div>
+            </td>
+            <td> <img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assests/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td> sofia </td>
+            <td class="text-danger ntfilled">
+              <div class="nfill">Not filled</div>
+            </td>
+            <td><img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assests/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td> olivia </td>
+            <td class="text-success filled">
+              <div class="filled-box">filled</div>
+            </td>
+            <td> <img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assests/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a> </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td> radhakrishanan </td>
+            <td class="text-danger ntfilled">
+              <div class="nfill">Not filled</div>
+            </td>
+            <td> <img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assests/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a> </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td> Adiison </td>
+            <td class="text-success filled">
+              <div class="filled-box">filled</div>
+            </td>
+            <td> <img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assests/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a> </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td> suhas </td>
+            <td class="text-success filled">
+              <div class="filled-box">filled</div>
+            </td>
+            <td><img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assests/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a> </td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td> sangita </td>
+            <td class="text-success filled">
+              <div class="filled-box">filled</div>
+            </td>
+            <td><img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assests/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td> Ram </td>
+            <td class="text-danger ntfilled">
+              <div class="nfill">Not filled</div>
+            </td>
+            <td> <img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assests/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a> </td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td> josef </td>
+            <td class="text-success filled">
+              <div class="filled-box">filled</div>
+            </td>
+            <td> <img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assests/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a> </td>
+          </tr>
+            <tr>
+            <td>11</td>
+            <td> josef </td>
+            <td> germany </td>
+            <td> <img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assests/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a> </td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td> jyoti </td>
+            <td> pune </td>
+            <td> <img class="eyeicon" src="./assests/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assests/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a> </td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td> amay </td>
+            <td> bengluru </td>
+            <td> back-end coder </td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td> sujay </td>
+            <td> germany </td>
+            <td> front-end designer </td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td> jimmy jain </td>
+            <td> NYk </td>
+            <td> sales </td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td> avni gupta </td>
+            <td> france </td>
+            <td> marketing </td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td> john denmar </td>
+            <td> san Frans </td>
+            <td> developer </td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td> sania watt </td>
+            <td> paris </td>
+            <td> content writer </td>
+          </tr>
+      </table>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $("#myBtn").click(function () {
+        $("#myModal").modal();
+      });
+    });
+  </script>
+
+</body>
+
+</html>

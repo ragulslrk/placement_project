@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <title>Login page</title>
+    <!DOCTYPE html>
+    
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title> Login Form</title>
+        <link rel="stylesheet" href="style.css">
+      </head>
+      <body>
+        <div class="center">
+          <h1>Login</h1>
+          <form method="post" action="/login">
+            <%if(message.length>0){%>
+              <div class="alert alert-danger" role="alert">
+                  <%=message%>
+                </div>
+                <%}%>
+            <div class="txt_field">
+              <input type="text" name="username" required>
+              <span></span>
+              <label>Username</label>
+            </div>
+            <div class="txt_field">
+              <input type="password"name="password" required id="pass">
+              <span></span>
+              <label>Password</label>
+            </div>
+            <label class="checkbox-wrap checkbox-primary font show_pass">Show password
+              <input type="checkbox" onclick="myFunction()">
+              <span class="checkmark"></span>
+              </label>
+
+            
+            <input type="submit" value="Login">
+            <div class="cute">
+              
+            </div>
+          </form>
+        </div>
+    
+     
+<script>
+
+function myFunction() {
+  var x = document.getElementById("pass");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+  
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

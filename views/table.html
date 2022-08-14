@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="tb">
+        <thead>
+            <tr>
+                <td>s.no</td>
+                <td>name</td>
+                <td>status</td>
+
+            </tr>
+        </thead>
+       
+    </table>
+    <script>
+        var table=document.getElementById('tb')
+        var data=[{"_id":"62e6983bb89305f9706d6dea","name":"student1","regno":"20uai039","year":"2020-2024","section":"a","academic":{"_id":"62e6983bb89305f9706d6ddc","ten_std_remarks":"Not Filled","ten_std_eligible":"Not Filled","twelve_std_remarks":"Not Filled","twelve_std_eligible":"Not Filled","is_filled":"0"},"resume":{"_id":"62e6983bb89305f9706d6dde","appearance_remarks":"Not Filled","appearance_eligible":"Not Filled","resume_content_remarks":"Not Filled","resume_content_eligible":"Not Filled","is_filled":"0"},"communication":{"_id":"62e6983bb89305f9706d6de0","speak_remarks":"Not Filled","speak_eligible":"Not Filled","read_remarks":"Not Filled","read_eligible":"Not Filled","write_remarks":"Not Filled","write_eligible":"Not Filled","is_filled":"0"},"project":{"_id":"62e6983bb89305f9706d6de2","group_remarks":"Not Filled","group_eligible":"Not Filled","individual_remarks":"Not Filled","individual_eligible":"Not Filled","is_filled":"0"},"skill":{"_id":"62e6983bb89305f9706d6de4","skill_list":[],"is_filled":"0"},"framework":{"_id":"62e6983bb89305f9706d6de7","framework_list":[],"is_filled":"0"}}]
+        var tbody= document.createElement('tbody')     
+        data.forEach(e=>{
+            var row=document.createElement('tr')
+
+
+            var  td=document.createElement('td')
+            td.innerText=e.name
+            row.appendChild(td)
+
+            var  td1=document.createElement('td')
+            td1.innerText=e.regno
+            row.appendChild(td1)
+
+           var edit= `<img class="eyeicon" src="./assets/icons/view.png" style="height: 25px;"><a>View</a><img
+                class="penicon" src="./assets/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+                data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal" onclick="edit('${e._id}')">Edit</a> `
+
+                
+            var  td2=document.createElement('td')
+            td2.innerHTML=edit
+            row.appendChild(td2)
+
+            tbody.appendChild(row)
+            console.log(e.name,tbody)
+        })
+        table.appendChild(tbody)
+
+        const  edit= (id)=>
+        {
+            console.log(id,'clicked')
+        }
+    </script>
+</body>
+</html>
+<!-- 
+<td> <img class="eyeicon" src="./assets/icons/view.png" style="height: 25px;"><a>View</a><img
+    class="penicon" src="./assets/icons/pen (1).png" style="height: 20px;" data-toggle="modal"
+    data-target="#myModal" alt="Italian Trulli"><a data-toggle="modal" data-target="#myModal">Edit</a> </td> -->

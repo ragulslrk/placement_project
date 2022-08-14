@@ -1,0 +1,111 @@
+[,{"_id":"62ea49137aa95caad05f9236","name":"Hari Gupta","regno":"20uai021","academic":{"_id":"62ea49127aa95caad05f9227","is_filled":"Filled"},"resume":{"_id":"62ea49127aa95caad05f922a","is_filled":"Filled"},"communication":{"_id":"62ea49127aa95caad05f922c","is_filled":"Filled"},"project":{"_id":"62ea49137aa95caad05f922e","is_filled":"Not Filled"},"skill":{"_id":"62ea49137aa95caad05f9230","is_filled":"Filled"},"framework":{"_id":"62ea49137aa95caad05f9233","is_filled":"Not Filled"}}]
+
+{"_id":"62e6983bb89305f9706d6dea",
+"name":"student1",
+"regno":"20uai039",
+"academic":{"_id":"62e6983bb89305f9706d6ddc","is_filled":"Not Filled"}
+,"resume":{"_id":"62e6983bb89305f9706d6dde","is_filled":"Not Filled"}
+,"communication":{"_id":"62e6983bb89305f9706d6de0","is_filled":"Filled"}
+,"project":{"_id":"62e6983bb89305f9706d6de2","is_filled":"Filled"}
+,"skill":{"_id":"62e6983bb89305f9706d6de4","is_filled":"Not Filled"},
+"framework":{"_id":"62e6983bb89305f9706d6de7","is_filled":"Filled"}}
+<div class="view-modal " id="myModal">
+<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+  < class="modal-content">
+   
+    
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h5 class="modal-title">View</h5>
+      <a type="button" class="close"  data-dismiss="modal">&times;</a>
+    </div>
+
+    <!-- Modal body -->
+    <div style="padding: 30px 30px 30px 30px; overflow: scroll;">
+      <div style="margin-bottom: 50px;">
+        <h4 style="margin-bottom:20px; ">Academics:</h4>
+        <table class="table table-bordered table-responsive-lg" id="xyz">
+          <thead>
+            <tr>
+              <th scope="col">S.no</th>
+              <th scope="col">Content</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Eligible</th>
+            </tr>
+          </thead>
+          <tbody id="tb1">
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+
+    
+      <div style="margin-bottom: 50px;">
+        <h4 style="margin-bottom:20px; ">Communication:</h4>
+        <table class="table table-bordered table-responsive-lg" id="xyz">
+          <thead>
+            <tr>
+              <th scope="col">S.no</th>
+              <th scope="col">Content</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Eligible</th>
+            </tr>
+          </thead>
+          <tbody id="tb2">
+
+          </tbody>
+        </table>
+
+        </div>
+        
+   
+   
+
+ 
+
+
+    <div style="margin-bottom: 50px;">
+      <h4 style="margin-bottom:20px; ">Project:</h4>
+      <table class="table table-bordered table-responsive-lg" id="xyz">
+        <thead>
+          <tr>
+            <th scope="col">S.no</th>
+            <th scope="col">Content</th>
+            <th scope="col">Remark</th>
+            <th scope="col">Eligible</th>
+          </tr>
+        </thead>
+        <tbody id="tb3">
+
+        </tbody>
+      </table>
+</div>
+
+
+
+<div style="margin-bottom: 50px;">
+  <h4 style="margin-bottom:20px; ">CV:</h4>
+  <table class="table table-bordered table-responsive-lg" id="xyz">
+    <thead>
+      <tr>
+        <th scope="col">S.no</th>
+        <th scope="col">Content</th>
+        <th scope="col">Remark</th>
+        <th scope="col">Eligible</th>
+      </tr>
+    </thead>
+    <tbody id="tb4">
+
+    </tbody>
+  </table>
+  </div>
+
+</div>
+</div>
+
+<!-- The Modal  1 -->
+
+</div>

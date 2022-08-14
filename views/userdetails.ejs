@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>User Details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Tiro+Gurmukhi&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <!-- <script>
+    $(document).ready(function () {
+      $('#myTable').DataTable();
+    });
+  </script> -->
+
+</head>
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><b><h2 class="dashboard"> Dashboard-Admin </h2></b>  </a>
+   
+    
+      <ul class=" nav justify-content-end">
+      
+        <li class="nav-item mr-4">
+          <a href="/logout"><button class="bn632-hover bn26">Logout</button></a>
+        </li>
+       
+        <li class="nav-item">
+          <a href="/dashboard"><button class="bn632-hover bn26">View Student details</button></a>
+        </li>
+       
+      </ul>
+    
+    </div>
+  
+</nav>
+
+<body>
+  <div class="divbody">
+    <div class="tabel1 table-responsive" style="overflow-x: hidden;">
+      <!-- Button trigger modal -->
+      <div class="container">
+        <!-- Button to Open the Modal -->
+        
+        <!-- The Modal  1 -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h5 class="modal-title">User Details</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div id="msg">
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <table class="table table-bordered" id="table-role">
+                  <tbody>
+                    <tr>
+                      <td>Username</td>
+                      <td style="padding:0;"><input class="usr" id="username"></td>
+                    </tr>
+                    <tr>
+                      <td>Password</td>
+                      <td style="padding:0;"><input class="pass" id="password"></td>
+                    </tr>
+                    <tr>
+                      <td>Role</td>
+                      <td style="padding:0">
+                        <form>
+
+                          <select name="cars" class="select2" id="role">
+                            <option value="academic_head">Academic Clearance Head</option>
+                            <option value="communication_head">Communication Clearance Head</option>
+                            <option value="cv_head">Resume Clearance Head</option>
+                            <option value="project_head">Project Clearance Head</option>
+                            <option value="skill_head">Skill Clearance Head</option>
+                            <option value="framework_head">Programming Clearance Head</option>
+                          </select>
+                          <br>
+                        </form>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer" id="footer-btn">
+              
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container1">
+        <!-- Button to Open the Modal -->
+        <!-- The Modal  1 -->
+        <div class="modal add-modal" id="myModal1">
+          <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h5 class="modal-title" >Create new user</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button> 
+              </div>
+
+              <div>
+                <div id="msg1">
+
+                </div>
+                <table class="table table-bordered" id="table-role">
+                  <tbody>
+                    <tr>
+                      <td>Username</td>
+                      <td style="padding:0;"><input class="usr" id="user"></td>
+                    </tr>
+                    <tr>
+                      <td>Password</td>
+                      <td style="padding:0;"><input class="pass" id="pass"></td>
+                    </tr>
+                    <tr>
+                      <td>Role</td>
+                      <td style="padding:0">
+                        <form>
+
+                          <select name="cars" class="select2" id="role_add">
+                            <option value="academic_head">Academic Clearance Head</option>
+                            <option value="communication_head">Communication Clearance Head</option>
+                            <option value="cv_head">Resume Clearance Head</option>
+                            <option value="project_head">Project Clearance Head</option>
+                            <option value="skill_head">Skill Clearance Head</option>
+                            <option value="framework_head">Programming Clearance Head</option>
+                          </select>
+                          <br>
+                        </form>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" style="height:40px; text-align :center; font-size: small;"
+                  data-dismiss="modal" onclick="add_user_post()">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal End-->
+    <div  class="table-responsive">
+      <div class="btn-newuser">
+        <button class="button-21" id="mybtn1"   role="button" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 16px; color: rgba(0, 0, 0, 0.591);" onclick="add_user_modal()">+ Create New
+          User</button>
+      </div>
+      <table id="myTable" class="table table-bordered table-hover mx-auto w-50 h-10" style="width:100%;  ">
+        <thead>
+          
+          <tr class="change2" style="background-color:rgb(0, 0, 255); color: white;">
+            <div class="wtcl">
+              <th style="text-align: center;" class="w-0">Username</th>
+              <th style="text-align: center;" class="w-2"> Password</th>
+              <th style="text-align: center;" class="w-2"> Role</th>  
+              <th style="text-align: center;"> Department </th>
+              <th style="text-align: center; width:30%"> View </th>
+            </div>
+          </tr>
+        </thead>
+        
+      </table>
+    </div>
+    </div>
+  </div>
+ 
+   <script  src="./assets/js/userdetails.js"></script>
+
+</body>
+
+</html>
